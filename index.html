@@ -301,3 +301,604 @@
     .section-products {
       background: var(--bg-sub);
       padding: 4rem 0;
+    }
+    @media (min-width: 768px) {
+      .section-products { padding: 5rem 0; }
+    }
+    .products-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    @media (min-width: 768px) {
+      .products-header {
+        flex-direction: row;
+        align-items: flex-end;
+        margin-bottom: 3.5rem;
+      }
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 768px) {
+      .products-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+    @media (min-width: 1024px) {
+      .products-grid {
+        grid-template-columns: repeat(4, minmax(0,1fr));
+      }
+    }
+    .product-card {
+      cursor: pointer;
+    }
+    .product-img-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: #fff;
+      margin-bottom: 1rem;
+    }
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.02);
+      opacity: 0.9;
+      transition: transform 0.7s ease, opacity 0.4s ease;
+    }
+    .product-card:hover img {
+      transform: scale(1.08);
+      opacity: 1;
+    }
+    .product-main-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.4rem;
+    }
+    .product-name-jp {
+      font-size: 1rem;
+      font-family: 'Zen Old Mincho', serif;
+    }
+    .product-price {
+      font-size: 0.8rem;
+      opacity: 0.6;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .product-name-en {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .product-desc {
+      font-size: 0.75rem;
+      opacity: 0.8;
+      font-family: 'Zen Old Mincho', serif;
+    }
+    .products-viewall-desktop {
+      display: none;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+    }
+    @media (min-width: 768px) {
+      .products-viewall-desktop { display: inline-flex; align-items: center; gap: 0.4rem; }
+      .products-viewall-desktop:hover { color: var(--accent); }
+    }
+    .products-viewall-mobile {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+    .products-viewall-mobile a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      border: 1px solid var(--text-main);
+      padding: 0.8rem 2.5rem;
+    }
+
+    /* Journal */
+    .section-journal {
+      padding: 4rem 0 4.5rem;
+    }
+    @media (min-width: 768px) {
+      .section-journal { padding: 5rem 0 5.5rem; }
+    }
+    .journal-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    @media (min-width: 900px) {
+      .journal-grid {
+        grid-template-columns: 1.2fr 2.8fr;
+        gap: 3rem;
+      }
+    }
+    .journal-title {
+      font-size: 2.4rem;
+      margin-bottom: 1.8rem;
+    }
+    @media (min-width: 900px) {
+      .journal-title { font-size: 3rem; }
+    }
+    .journal-lead {
+      font-size: 0.9rem;
+      opacity: 0.75;
+      font-family: 'Zen Old Mincho', serif;
+      margin-bottom: 1.8rem;
+    }
+    .journal-lead br { display: none; }
+    @media (min-width: 768px) {
+      .journal-lead br { display: inline; }
+    }
+    .journal-line {
+      width: 48px;
+      height: 1px;
+      background: var(--accent);
+    }
+    .journal-list article {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding-bottom: 1.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(42,42,42,0.1);
+      cursor: pointer;
+    }
+    @media (min-width: 900px) {
+      .journal-list article {
+        flex-direction: row;
+        gap: 2.5rem;
+        align-items: flex-start;
+      }
+    }
+    .journal-date {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      opacity: 0.55;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .journal-chip {
+      display: inline-block;
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(42,42,42,0.1);
+      background: #F4F1EA;
+      margin-bottom: 0.4rem;
+      color: var(--accent);
+    }
+    .journal-title-text {
+      font-size: 1.1rem;
+      font-family: 'Zen Old Mincho', serif;
+    }
+    .journal-arrow {
+      margin-top: 0.5rem;
+      align-self: flex-start;
+    }
+    @media (min-width: 900px) {
+      .journal-arrow {
+        margin-top: 0;
+        margin-left: auto;
+      }
+    }
+    .journal-arrow-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 1px solid rgba(42,42,42,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      transition: all 0.25s ease;
+    }
+    article:hover .journal-title-text { color: var(--accent); }
+    article:hover .journal-arrow-circle {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      transform: translateX(3px);
+    }
+
+    /* Fade-in animation */
+    .fadein {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+    .fadein.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Footer */
+    footer {
+      background: #2A2A2A;
+      color: #F4F1EA;
+      padding: 4rem 0 2.5rem;
+    }
+    @media (min-width: 768px) {
+      footer { padding: 4.5rem 0 3rem; }
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    @media (min-width: 900px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        gap: 4rem;
+      }
+    }
+    .footer-brand {
+      font-size: 1.8rem;
+      letter-spacing: 0.22em;
+      margin-bottom: 1.75rem;
+    }
+    .footer-address {
+      font-size: 0.8rem;
+      opacity: 0.6;
+      font-family: 'Zen Old Mincho', serif;
+    }
+    .footer-icons {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+    .footer-icons span { cursor: pointer; }
+    .footer-icons span:hover { color: var(--accent); }
+    .footer-links-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    @media (min-width: 640px) {
+      .footer-links-wrap {
+        flex-direction: row;
+        gap: 3.5rem;
+      }
+    }
+    .footer-list {
+      list-style: none;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+    .footer-list li { margin-bottom: 0.7rem; cursor: pointer; }
+    .footer-list li:hover { opacity: 0.95; }
+    .footer-bottom {
+      border-top: 1px solid rgba(244,241,234,0.1);
+      padding-top: 1.5rem;
+      font-size: 0.65rem;
+      opacity: 0.4;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+    @media (min-width: 768px) {
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1 class="font-serif-jp">麹LIFE WELL-BEING</h1>
+    <button class="menu-button" id="menuButton" aria-label="メニューを開く">
+      <span class="menu-label font-serif-en">MENU</span>
+      <div class="menu-icon" id="menuIcon"><span></span></div>
+    </button>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="menu-overlay" id="menuOverlay">
+    <nav>
+      <a href="#philosophy" data-menu-close>Philosophy</a>
+      <a href="#products" data-menu-close>Products</a>
+      <a href="#journal" data-menu-close>Journal</a>
+      <a href="#contact" data-menu-close>Contact</a>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div
+      class="hero-bg"
+      id="heroBg"
+      style="background-image:url('https://images.unsplash.com/photo-1541624467185-1e374d6c4831?q=80&w=2000&auto=format&fit=crop');"
+    ></div>
+    <div class="hero-inner">
+      <p class="hero-en font-serif-en">TIMELESS FERMENTATION</p>
+      <h2 class="hero-title font-serif-jp">時を醸す、命を継ぐ。</h2>
+      <div class="hero-line"></div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section id="philosophy" class="section-philo">
+    <div class="container">
+      <div class="philo-grid">
+        <div class="fadein">
+          <span class="philo-label font-serif-en">- Philosophy</span>
+          <h3 class="philo-lead font-serif-jp">
+静寂の中で、
+菌の声を聞く。</h3>
+          <p class="philo-text font-serif-jp">
+創業から100年。私たちは機械に頼らず、手ごねによる伝統的な製法を守り続けてきました。麹室（こうじむろ）の温度、湿度、そして蔵人の掌の温もり。すべてが調和した時、麹は白く美しい花を咲かせます。それは、効率化とは無縁の、しかし最も贅沢な時間の使い方です。
+          </p>
+          <a href="#philosophy" class="philo-readmore font-serif-en">
+            READ MORE <span>→</span>
+          </a>
+        </div>
+
+        <div class="philo-image-wrap fadein">
+          <div class="philo-main-img">
+            <img src="https://images.unsplash.com/photo-1626202399222-6b9f2eb58410?q=80&w=1200&auto=format&fit=crop" alt="Koji making hands" />
+          </div>
+          <div class="philo-circle"></div>
+          <div class="philo-card">
+            <p class="font-serif-en" style="font-size:0.7rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">
+              Since 1923
+            </p>
+            <p class="font-serif-jp">
+              百年続く、<br>手しごとの記憶。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="divider"></div>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="section-products">
+    <div class="container">
+      <div class="products-header">
+        <div class="fadein">
+          <span class="philo-label font-serif-en">- Collection</span>
+          <h3 class="font-serif-jp" style="font-size:1.9rem;">季節の贈り物</h3>
+        </div>
+        <div class="fadein">
+          <a href="#products" class="products-viewall-desktop font-serif-en">
+            VIEW ALL PRODUCTS <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="products-grid">
+        <!-- 1 -->
+        <div class="product-card fadein">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=1000&auto=format&fit=crop" alt="Premium Raw Koji" />
+          </div>
+          <div class="product-main-row">
+            <h4 class="product-name-jp">特選 生麹</h4>
+            <span class="product-price font-serif-en">¥1,200</span>
+          </div>
+          <p class="product-name-en">PREMIUM RAW KOJI</p>
+          <p class="product-desc">
+            ふわりと香る栗のような甘み。最高級の米を使用した、生命力あふれる生麹。
+          </p>
+        </div>
+
+        <!-- 2 -->
+        <div class="product-card fadein">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1626202378945-8c0c1b6b5b5c?q=80&w=1000&auto=format&fit=crop" alt="Amazake Extract" />
+          </div>
+          <div class="product-main-row">
+            <h4 class="product-name-jp">麹の雫（甘酒原液）</h4>
+            <span class="product-price font-serif-en">¥2,400</span>
+          </div>
+          <p class="product-name-en">AMAZAKE EXTRACT</p>
+          <p class="product-desc">
+            砂糖不使用。麹の酵素が生み出す、自然で濃厚な甘みのエッセンス。
+          </p>
+        </div>
+
+        <!-- 3 -->
+        <div class="product-card fadein">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1616428787723-578b9e60471b?q=80&w=1000&auto=format&fit=crop" alt="Salt Koji Vintage" />
+          </div>
+          <div class="product-main-row">
+            <h4 class="product-name-jp">熟成 塩麹</h4>
+            <span class="product-price font-serif-en">¥1,500</span>
+          </div>
+          <p class="product-name-en">SALT KOJI VINTAGE</p>
+          <p class="product-desc">
+            半年間じっくりと熟成させ、角のとれたまろやかな塩味と旨味を実現。
+          </p>
+        </div>
+
+        <!-- 4 -->
+        <div class="product-card fadein">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?q=80&w=1000&auto=format&fit=crop" alt="Soy Sauce Koji" />
+          </div>
+          <div class="product-main-row">
+            <h4 class="product-name-jp">伝統 醤油麹</h4>
+            <span class="product-price font-serif-en">¥1,800</span>
+          </div>
+          <p class="product-name-en">SOY SAUCE KOJI</p>
+          <p class="product-desc">
+            国産有機大豆と小麦から作られた醤油と、自慢の生麹で仕込んだ芳醇な調味料。
+          </p>
+        </div>
+      </div>
+
+      <div class="products-viewall-mobile">
+        <a href="#products" class="font-serif-en">
+          VIEW ALL PRODUCTS <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNAL -->
+  <section id="journal" class="section-journal">
+    <div class="container">
+      <div class="journal-grid">
+        <div class="fadein">
+          <h3 class="journal-title font-serif-en">Koji Life</h3>
+          <p class="journal-lead">
+            麹のある暮らし、<br>
+            日々の食卓の風景。<br>
+            季節の便りをお届けします。
+          </p>
+          <div class="journal-line"></div>
+        </div>
+
+        <div class="journal-list">
+          <article class="fadein">
+            <div style="min-width:7rem;">
+              <span class="journal-date">2023.10.20</span>
+            </div>
+            <div style="flex:1;">
+              <span class="journal-chip">RECIPE</span>
+              <h4 class="journal-title-text">
+                秋の夜長に、ホット甘酒を。
+              </h4>
+            </div>
+            <div class="journal-arrow">
+              <div class="journal-arrow-circle">→</div>
+            </div>
+          </article>
+
+          <article class="fadein">
+            <div style="min-width:7rem;">
+              <span class="journal-date">2023.10.15</span>
+            </div>
+            <div style="flex:1;">
+              <span class="journal-chip">BREWERY</span>
+              <h4 class="journal-title-text">
+                新しい木桶が届きました。
+              </h4>
+            </div>
+            <div class="journal-arrow">
+              <div class="journal-arrow-circle">→</div>
+            </div>
+          </article>
+
+          <article class="fadein">
+            <div style="min-width:7rem;">
+              <span class="journal-date">2023.10.01</span>
+            </div>
+            <div style="flex:1;">
+              <span class="journal-chip">LIFESTYLE</span>
+              <h4 class="journal-title-text">
+                発酵食で整える、週末の朝。
+              </h4>
+            </div>
+            <div class="journal-arrow">
+              <div class="journal-arrow-circle">→</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2 class="footer-brand font-serif-jp">麹LIFE WELL-BEING</h2>
+          <div class="footer-address">
+            〒000-0000<br>
+            日本のどこかの美しい里山 1-2-3<br>
+            Tel: 03-0000-0000
+          </div>
+          <div class="footer-icons" aria-hidden="true">
+            <span>📷</span>
+            <span>✉️</span>
+          </div>
+        </div>
+
+        <div class="footer-links-wrap">
+          <ul class="footer-list font-serif-en">
+            <li>HOME</li>
+            <li>PHILOSOPHY</li>
+            <li>PRODUCTS</li>
+            <li>JOURNAL</li>
+          </ul>
+          <ul class="footer-list font-serif-jp">
+            <li>特定商取引法に基づく表記</li>
+            <li>プライバシーポリシー</li>
+            <li>お問い合わせ</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom font-serif-en">
+        <p>&copy; 2024 Koji Life WELL-BEING. All Rights Reserved.</p>
+        <p>DESIGNED BY HIGH-END BRAND STUDIO</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // menu toggle
+    const menuButton = document.getElementById('menuButton');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const menuIcon = document.getElementById('menuIcon');
+    const menuLinks = document.querySelectorAll('[data-menu-close]');
+
+    function toggleMenu() {
+      menuOverlay.classList.toggle('is-open');
+      menuIcon.classList.toggle('is-open');
+      document.body.style.overflow = menuOverlay.classList.contains('is-open') ? 'hidden' : '';
+    }
+
+    menuButton.addEventListener('click', toggleMenu);
+    menuLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+    // hero parallax
+    const heroBg = document.getElementById('heroBg');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY || window.pageYOffset;
+      heroBg.style.transform = 'translateY(' + y * 0.2 + 'px) scale(' + (1 + y * 0.0005) + ')';
+    });
+
+    // fade-in on scroll
+    const fadeEls = document.querySelectorAll('.fadein');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
